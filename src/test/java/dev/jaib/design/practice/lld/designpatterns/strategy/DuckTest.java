@@ -1,8 +1,6 @@
-package dev.jaib.design.practice.lld.designpatterns.StrategyPattern;
+package dev.jaib.design.practice.lld.designpatterns.strategy;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class DuckTest
 {

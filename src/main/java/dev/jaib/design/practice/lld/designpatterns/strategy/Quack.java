@@ -1,4 +1,4 @@
-package dev.jaib.design.practice.lld.designpatterns.StrategyPattern;
+package dev.jaib.design.practice.lld.designpatterns.strategy;
 
 public class Quack implements QuackBehaviour
 {
