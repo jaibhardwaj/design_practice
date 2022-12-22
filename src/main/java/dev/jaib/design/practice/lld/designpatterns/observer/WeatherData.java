@@ -29,7 +29,13 @@ public class WeatherData implements Subject
 	@Override
 	public void notifyObserver()
 	{
+		// This is PUSH mechanism of notify observer where we are pushing all the data to all the observers,
+		// even they required these all the data or not.
 		observers.forEach(observer -> observer.update(getTemperature(), getHumidity(), getPressure()));
+
+		// In PULL Mechanism, we just notify observer about the change , and as they have subject object, then they can
+		// pull the those data which they required using the getter
+		// observers.forEach(observer -> observer.update());
 	}
 
 	public float getTemperature()

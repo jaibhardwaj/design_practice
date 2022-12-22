@@ -2,9 +2,17 @@ package dev.jaib.design.practice.lld.designpatterns.observer;
 
 public class ForecastDisplay implements Observer, WeatherDisplay
 {
+	private final WeatherData weatherData;
 	private float temperature;
 	private float humidity;
 
+	public ForecastDisplay(WeatherData weatherData)
+	{
+		this.weatherData = weatherData;
+		this.weatherData.registerObserver(this);
+	}
+
+	// In Push Mechanism
 	@Override
 	public void update(float temp, float humidity, float pressure)
 	{
@@ -12,6 +20,16 @@ public class ForecastDisplay implements Observer, WeatherDisplay
 		this.humidity = humidity;
 		display();
 	}
+
+	// In PULL Mechanism
+	/*
+	@Override
+	public void update()
+	{
+		this.temperature = weatherData.getTemperature();
+		this.humidity = weatherData.getHumidity();
+		display();
+	}*/
 
 	@Override
 	public void display()

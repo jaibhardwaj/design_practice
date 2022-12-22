@@ -9,13 +9,13 @@ public class ObserverPatternTest
 	{
 		WeatherData weatherData = new WeatherData();
 
-		CurrentConditionDisplay display1 = new CurrentConditionDisplay();
-		ForecastDisplay display2 = new ForecastDisplay();
-		WeatherStatsDisplay display3 = new WeatherStatsDisplay();
+		CurrentConditionDisplay display1 = new CurrentConditionDisplay(weatherData);
+		ForecastDisplay display2 = new ForecastDisplay(weatherData);
+		WeatherStatsDisplay display3 = new WeatherStatsDisplay(weatherData);
 
-		weatherData.registerObserver(display1);
-		weatherData.registerObserver(display2);
-		weatherData.registerObserver(display3);
+		//weatherData.registerObserver(display1);
+		//weatherData.registerObserver(display2);
+		//weatherData.registerObserver(display3);
 
 		weatherData.setMeasurement(10, 20, 30);
 		System.out.println();
