@@ -11,8 +11,8 @@ public class DecoratorPatternTest
 	{
 		Beverage beverage1 = new DarkRoast();
 
-		beverage1 = new Macho(beverage1);
-		beverage1 = new Macho(beverage1);
+		beverage1 = new Mocha(beverage1);
+		beverage1 = new Mocha(beverage1);
 		beverage1 = new Soy(beverage1);
 
 		System.out.println(beverage1.getDescription());

@@ -1,8 +1,8 @@
 package dev.jaib.design.practice.lld.designpatterns.decorator;
 
-public class Macho extends CondimentDecorator
+public class Mocha extends CondimentDecorator
 {
-	public Macho(Beverage beverage)
+	public Mocha(Beverage beverage)
 	{
 		this.beverage = beverage;
 	}
@@ -16,6 +16,6 @@ public class Macho extends CondimentDecorator
 	@Override
 	public String getDescription()
 	{
-		return beverage.getDescription() + " Macho ";
+		return beverage.getDescription() + " Mocha ";
 	}
 }
