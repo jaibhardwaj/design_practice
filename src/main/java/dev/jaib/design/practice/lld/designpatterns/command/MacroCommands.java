@@ -2,7 +2,7 @@ package dev.jaib.design.practice.lld.designpatterns.command;
 
 public class MacroCommands implements Command
 {
-	private Command[] commands;
+	private final Command[] commands;
 
 	public MacroCommands(Command[] commands)
 	{
